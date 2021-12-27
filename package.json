@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scaleflex/filerobot-image-editor"
+    "url": "git+https://github.com/scaleflex/filerobot-image-editor.git"
   },
   "homepage": "https://github.com/scaleflex/filerobot-image-editor#readme",
   "keywords": [
@@ -63,11 +63,17 @@
     "build-demo-react": "npm run clean-demo-react && webpack --mode production --config config/webpack.demo-react-config.js",
     "clean-build": "rm -rf build",
     "build-new": "webpack --mode production --config config/webpack.js-config.js",
-    "build": "npm run clean-build && npm run build-new && ./scripts/copy_build.sh",
+    "build": "npm run clean-build && npm run build-new",
     "build-w": "npm run clean-build && npm run build-new && .\\scripts\\copy_build.sh",
     "clean-dist": "rm -rf dist",
     "dist": "npm run clean-dist && npx babel src --out-dir dist --copy-files",
     "deploy": "gh-pages -d examples/js/dist",
     "publish-demo": "npm run build-demo-js && npm run deploy"
+  },
+  "bugs": {
+    "url": "https://github.com/scaleflex/filerobot-image-editor/issues"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
